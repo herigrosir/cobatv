@@ -24,35 +24,18 @@ https://www.dropbox.com/s/k4ww0fi8co8wmtt/dzifp-housepart2023.mp4?dl=1
 #EXTINF:-1 tvg-logo="https://media.themoviedb.org/t/p/w300_and_h450_face/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" group-title="1.ALL",John Wick Chapter 4 (2023)
 https://www.dropbox.com/s/6cayjjw87le2mea/dzifp-johnwick4.mp4?dl=1
 
-============================
-code link dibawah ini jangan dihapus 
 
-(() => {
-  const XHR = XMLHttpRequest.prototype;
-  const open = XHR.open;
-  let done = false;
-  XHR.open = function (...args) {
-    const [method, url] = args;
-    this._method = method;
-    this._url = url;
-    if (
-      done === false &&
-      method === 'GET' &&
-      ['.mp4', '.m3u8'].some(type => new URL(url).pathname.endsWith(type))
-    ) {
-      done = true;
-      const playlist = [
-        '#EXTM3U',
-        `#EXTVLCOPT:http-referrer=${location.toString()}`,
-        '#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0',
-        url,
-      ].join('\n');
-      const link = document.createElement('a');
-      link.setAttribute('download', 'playlist.m3u8');
-      link.setAttribute('href', `data:application/vnd.apple.mpegurl;base64,${btoa(playlist)}`);
-      link.click();
-    }
-    return open.apply(this, args);
-  };
-})();
+
+(function (xhr) {
+  var XHR = XMLHttpRequest.prototype
+  var open = XHR.open
+  XHR.open = function (method, url) {
+    this._method = method
+    this._url = url
+    if ((arguments[0] == "GET") && ((arguments[1].indexOf(".mp4") > 0) || (arguments[1].indexOf(".m3u8") > 0)))
+      console.log("open: url:", url)
+    return open.apply(this, arguments)
+  }
+})(XMLHttpRequest)
+
 
