@@ -4065,8 +4065,7 @@ http://abf.filmbluray.id/iawm149
 http://abf.filmbluray.id/q63avr6
 #EXTINF:-1 tvg-logo="http://pictures.my.id/images/re6.png" group-title="1.ALL", The Final Chapter (2016) SUB INDO
 http://abf.filmbluray.id/t2s5191
-#EXTINF:-1 tvg-logo="https://images-na.ssl-images-amazon.com/images/I/71piCu%2BSGQL._AC_SY500_.jpg" group-title="1.ALL", Spiderman 2002 MD
-https://www.googleapis.com/drive/v3/files/1REkPOSU-1fLR1q4_9yS-23aQcUCUPkpw?alt=media&key=AIzaSyDrQ86QJRiJlyPcLFYdxT22_oC2H1verR4
+
 #EXTINF:-1 tvg-logo="https://worldviewbibleversus.files.wordpress.com/2015/03/spider-man-2.jpg" group-title="1.ALL", Spiderman 2 2004 MD
 https://www.googleapis.com/drive/v3/files/1Hqh4fOjRAA2b2KQK7HqDNmUceQhyFqYC?alt=media&key=AIzaSyDrQ86QJRiJlyPcLFYdxT22_oC2H1verR4
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/id/7/7a/Spider-Man_3%2C_International_Poster.jpg" group-title="1.ALL", Spiderman 3 2007 MD
