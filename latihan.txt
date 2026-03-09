@@ -2762,14 +2762,5 @@ https://cloud.hownetwork.xyz/zzz/JRk9KzZUES0nIh9hcQBkbW8vDAwBNSgZHWUSe3AJNW93/34
 https://cloud.hownetwork.xyz/zzz/LhElJzERWicjOAVhIUU_NCYRJyloFA4yNjQFNW4CZmp3VR4LBz07HhoORS5yAmQ5Jxs/34/480.m3u8
 
 
-(function (xhr) {
-  var XHR = XMLHttpRequest.prototype
-  var open = XHR.open
-  XHR.open = function (method, url) {
-    this._method = method
-    this._url = url
-    if ((arguments[0] == "GET") && ((arguments[1].indexOf(".mp4") > 0) || (arguments[1].indexOf(".m3u8") > 0)))
-      console.log("open: url:", url)
-    return open.apply(this, arguments)
-  }
-})(XMLHttpRequest)
+
+
